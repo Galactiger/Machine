@@ -1,5 +1,6 @@
 builddir = ../build
 bindir = ../bin
+datadir = ../data
 program = $(bindir)/machine
 
 cxx = g++
@@ -8,17 +9,19 @@ objs = $(srcs:%.cpp=$(builddir)/%.o)
 flgs = -Wall
 libs = -lsfml-graphics -lsfml-window -lsfml-system
 
-all: compile $(program)
+all: setup $(program)
 
-run: compile $(program)
+run: setup $(program)
 	./$(program)
 
 clean:
-	rm $(builddir)/*.o $(program)
+	rm -rf $(bindir)
+	rm -rf $(builddir)
 
-compile:
+setup:
 	mkdir -p $(builddir)
 	mkdir -p $(bindir)
+	cp -R $(datadir) $(bindir)
 
 $(program): $(objs)
 	$(cxx) -o $(program) $(objs) $(libs)
