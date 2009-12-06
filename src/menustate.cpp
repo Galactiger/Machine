@@ -3,7 +3,7 @@
 #include "gamestate.hpp"
 
 MenuState::MenuState(Game *game)
-: State(game)
+: State(game), selection_(0)
 {
 	AddEntry(MenuEntryID::Play, "Play");
 	AddEntry(MenuEntryID::Settings, "Settings");

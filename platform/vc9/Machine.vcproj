@@ -24,7 +24,7 @@
 			>
 			<Tool
 				Name="VCNMakeTool"
-				BuildCommandLine="cd ../../src&#x0D;&#x0A;make clean &amp;&amp; make 2&gt;&amp;1 | sed -e &apos;s/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/&apos;&#x0D;&#x0A;cd ../platform/vc9&#x0D;&#x0A;cp *.dll ../../bin/"
+				BuildCommandLine="cd ../../src&#x0D;&#x0A;make clean &amp;&amp; make 2&gt;&amp;1 | sed -e &quot;s/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/&quot;&#x0D;&#x0A;cd ../platform/vc9&#x0D;&#x0A;cp *.dll ../../bin/"
 				ReBuildCommandLine=""
 				CleanCommandLine="cd ../../src&#x0D;&#x0A;make clean"
 				Output="Machine.exe"
@@ -38,15 +38,15 @@
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
-			OutputDirectory="$(ConfigurationName)"
+			OutputDirectory="../../bin"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="0"
 			>
 			<Tool
 				Name="VCNMakeTool"
-				BuildCommandLine="make clean &amp;&amp; make 2&gt;&amp;1 | sed -e &apos;s/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/&apos;"
+				BuildCommandLine="cd ../../src&#x0D;&#x0A;make clean &amp;&amp; make 2&gt;&amp;1 | sed -e &apos;s/\(.[a-zA-Z]\+\):\([0-9]\+\):/\1(\2):/&apos;&#x0D;&#x0A;cd ../platform/vc9&#x0D;&#x0A;cp *.dll ../../bin/"
 				ReBuildCommandLine=""
-				CleanCommandLine="make clean"
+				CleanCommandLine="cd ../../src&#x0D;&#x0A;make clean"
 				Output="Machine.exe"
 				PreprocessorDefinitions="WIN32;NDEBUG"
 				IncludeSearchPath="C:\MinGW\include"

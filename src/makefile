@@ -6,7 +6,7 @@ program = $(bindir)/machine
 cxx = g++
 srcs = main.cpp game.cpp state.cpp menustate.cpp menuentry.cpp gamestate.cpp
 objs = $(srcs:%.cpp=$(builddir)/%.o)
-flgs = -Wall
+flgs = -Wall -DSFML_DYNAMIC
 libs = -lsfml-graphics -lsfml-window -lsfml-system
 
 all: setup $(program)
